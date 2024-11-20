@@ -30,7 +30,7 @@ class UserController extends Controller
     {
    
         if ($request->ajax()) {
-            $data = User::latest()->get();
+            $data = User::select('username','name','email')->get();
             return Datatables::of($data)
                     ->addColumn('action', function($row){
    
@@ -101,8 +101,8 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        $roles = Role::latest()->get();
-        return view('admin.user.edit', compact('user', 'roles'));
+        //$roles = Role::latest()->get();
+        //return view('admin.user.edit', compact('user', 'roles'));
     }
 
     /**

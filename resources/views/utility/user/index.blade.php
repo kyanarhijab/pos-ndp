@@ -33,11 +33,10 @@
               <table class="table table-striped table-borderless data-table">
                 <thead>
                   <tr>
-                    <th>Id</th>
                     <th>Username</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th></th>
+                    <th>action</th>
                   </tr>  
                 </thead>
               </table>
